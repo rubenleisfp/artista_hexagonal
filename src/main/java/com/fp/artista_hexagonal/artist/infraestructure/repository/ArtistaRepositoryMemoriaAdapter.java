@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-@Repository
+//@Repository
 public class ArtistaRepositoryMemoriaAdapter implements ArtistaRepositoryPort {
     private Map<Long, Artista> baseDatos = new HashMap<>();
     private Long contador = 1L;
