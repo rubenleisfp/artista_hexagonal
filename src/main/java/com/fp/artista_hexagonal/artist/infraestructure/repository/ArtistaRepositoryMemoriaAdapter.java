@@ -2,7 +2,7 @@ package com.fp.artista_hexagonal.artist.infraestructure.repository;
 
 
 import com.fp.artista_hexagonal.artist.domain.model.Artista;
-import com.fp.artista_hexagonal.artist.domain.port.ArtistaRepositoryPort;
+import com.fp.artista_hexagonal.artist.domain.port.out.ArtistaRepositoryPort;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

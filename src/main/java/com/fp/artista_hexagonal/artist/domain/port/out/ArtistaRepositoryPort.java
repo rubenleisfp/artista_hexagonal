@@ -1,4 +1,4 @@
-package com.fp.artista_hexagonal.artist.domain.port;
+package com.fp.artista_hexagonal.artist.domain.port.out;
 
 
 import com.fp.artista_hexagonal.artist.domain.model.Artista;

@@ -1,9 +1,10 @@
 package com.fp.artista_hexagonal.artist.infraestructure.controller;
 
-import com.fp.artista_hexagonal.artist.application.ArtistaUseCase;
+import com.fp.artista_hexagonal.artist.application.service.ArtistaService;
 import com.fp.artista_hexagonal.artist.application.exception.ArtistaDuplicadoException;
 import com.fp.artista_hexagonal.artist.application.exception.ArtistaInvalidoException;
 import com.fp.artista_hexagonal.artist.domain.model.Artista;
+import com.fp.artista_hexagonal.artist.domain.port.in.ArtistaUseCase;
 import com.fp.artista_hexagonal.artist.infraestructure.controller.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

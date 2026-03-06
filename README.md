@@ -4,6 +4,12 @@ Proyecto de gestión de artistas implementado con arquitectura hexagonal (Ports 
 
 # Rama
 En esta versión se trabaja con una repositorio que guarda la información en memoria
+En esta ocasión la manera de llevar a cabo la arquitectura ha sido más estricta
+Se crea un puerto de entrada (interfaz) ArtistaUseCase
+Para no depender de anotaciones de Spring propias de la capa de @Service como @Transactional
+Esa interfaz será implementada por la clase ArtistaService
+El controlador se desacopla del servicio ya que utiliza ArtistaUseCase que no tiene
+nada que ver con Spring
 
 ## Arquitectura
 
@@ -11,10 +17,11 @@ El proyecto sigue el patrón de arquitectura hexagonal para separar claramente l
 
 ### Dominio (Domain)
 - **Model**: `Artista` - Entidad principal del dominio
-- **Port**: `ArtistaRepositoryPort` - Interfaz que define los contratos del repositorio
+- **Port (out)**: `ArtistaRepositoryPort` - Interfaz que define los contratos del repositorio
+- **Port (int)**: `ArtistaUseCase` - Intefaz que Contiene la lógica de negocio para la gestión de artistas
 
 ### Aplicación (Application)
-- **UseCase**: `ArtistaUseCase` - Contiene la lógica de negocio para la gestión de artistas
+- **Service**: `ArtistaUseCase` -Implementa la lógica de negocio para la gestion de artistas con Spring
 - **Exceptions**: `ArtistaInvalidoException`, `ArtistaDuplicadoException` - Manejo de errores de negocio
 
 ### Infraestructura (Infrastructure)

@@ -1,17 +1,20 @@
-package com.fp.artista_hexagonal.artist.application;
+package com.fp.artista_hexagonal.artist.application.service;
 
 import com.fp.artista_hexagonal.artist.application.exception.ArtistaDuplicadoException;
 import com.fp.artista_hexagonal.artist.application.exception.ArtistaInvalidoException;
 import com.fp.artista_hexagonal.artist.domain.model.Artista;
-import com.fp.artista_hexagonal.artist.domain.port.ArtistaRepositoryPort;
+import com.fp.artista_hexagonal.artist.domain.port.in.ArtistaUseCase;
+import com.fp.artista_hexagonal.artist.domain.port.out.ArtistaRepositoryPort;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ArtistaUseCase {
+@Service
+public class ArtistaService implements ArtistaUseCase {
     private final ArtistaRepositoryPort repository;
 
-    public ArtistaUseCase(ArtistaRepositoryPort repository) {
+    public ArtistaService(ArtistaRepositoryPort repository) {
         this.repository = repository;
     }
 
