@@ -3,7 +3,7 @@
 Proyecto de gestión de artistas implementado con arquitectura hexagonal (Ports and Adapters) utilizando Spring Boot.
 
 # Rama
-En esta versión se trabaja con una repositorio que guarda la información en memoria
+En esta versión se trabaja con una repositorio que guarda la información en SQLite
 
 ## Arquitectura
 
